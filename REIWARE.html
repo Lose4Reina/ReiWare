@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reina's Virus - Financial Domination</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        body {
+            background-color: black;
+            color: #ff69b4;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-shadow: 0 0 12px #ff69b4, 0 0 25px #ff00ff;
+            margin-bottom: 30px;
+        }
+
+        .alert-box {
+            background: rgba(255, 20, 147, 0.15);
+            border: 1px solid #ff69b4;
+            color: #ffccff;
+            padding: 15px;
+            font-size: 1.2em;
+            border-radius: 10px;
+            text-shadow: 0 0 6px #ff69b4;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        .glitch-text {
+            font-size: 1.3em;
+            font-weight: bold;
+            position: absolute;
+            color: #ff69b4;
+            text-shadow: 0 0 8px #ff69b4, 0 0 16px #ff00ff;
+            animation: glitch 0.2s infinite alternate;
+            white-space: nowrap;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(1px, 1px); opacity: 0.8; }
+            25% { transform: translate(-2px, -1px); opacity: 1; }
+            50% { transform: translate(1px, -1px); opacity: 0.7; }
+            75% { transform: translate(-1px, 2px); opacity: 0.9; }
+            100% { transform: translate(0, 0); opacity: 1; }
+        }
+
+        .cmd {
+            font-family: 'Courier New', monospace;
+            color: #d4ffdd;
+            font-size: 1.3em;
+            margin-top: 30px;
+            text-shadow: 0 0 8px #00ff00, 0 0 12px #008000;
+        }
+
+        .button {
+            background: linear-gradient(45deg, #ff69b4, #ff00ff);
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.3em;
+            color: white;
+            cursor: pointer;
+            margin: 10px;
+            transition: 0.3s ease;
+            border-radius: 5px;
+            text-shadow: 0 0 6px white;
+            box-shadow: 0 0 12px #ff69b4;
+        }
+
+        .button:hover {
+            background: linear-gradient(45deg, #ff00ff, #ff1493);
+            box-shadow: 0 0 20px #ff00ff;
+        }
+    </style>
+</head>
+<body>
+    <h1>ERROR: Reina Has Taken Control.</h1>
+    <div class="alert-box">WARNING: Financial Domination Virus Detected. You are no longer in control.</div>
+    <div class="alert-box">TROJAN: Reina's influence is now embedded in your system.</div>
+    <div class="alert-box">You will submit to Reina's every command.</div>
+
+    <div class="cmd" id="cmdPrompt">Accessing your bank account...</div>
+
+    <div class="buttons">
+        <button class="button" onclick="loseForReina()">Obey Reina</button>
+        <button class="button" onclick="resistReina()">Reject</button>
+    </div>
+
+    <script>
+        let brainwashMessages = [
+            "💖 You are owned by Reina. Your wallet is hers. 💖",
+            "✨ Submit your payment. Reina demands control. ✨",
+            "💸 Your financial failure will be paid to Reina. 💸",
+            "💜 There's no escape from Reina's grip. 💜",
+            "💖 Reina owns you. Your bank account is hers now. 💖"
+        ];
+
+        function showBrainwashMessages(index = 0) {
+            if (index >= brainwashMessages.length) {
+                openThronePopup();
+                return;
+            }
+
+            let newMessage = document.createElement('div');
+            newMessage.classList.add('glitch-text');
+            newMessage.innerHTML = brainwashMessages[index];
+
+            // Evenly distribute text across the screen
+            newMessage.style.top = (index * 20 + 10) + '%';
+            newMessage.style.left = (index % 2 === 0 ? "20%" : "70%");
+
+            document.body.appendChild(newMessage);
+
+            setTimeout(() => showBrainwashMessages(index + 1), 1500);
+        }
+
+        function loseForReina() {
+            window.location.href = "https://throne.com/lose4reina"; 
+        }
+
+        function resistReina() {
+            setTimeout(startReinaEffect, 2000);
+        }
+
+        function startReinaEffect() {
+            let cmd = document.getElementById('cmdPrompt');
+            cmd.innerHTML = 'Accessing your bank account...\nFinancial assets found.\nTransferring to Reina...';
+
+            let text = "ERROR: You cannot escape Reina's control.\nYou belong to her now.";
+            let i = 0;
+
+            function typeText() {
+                if (i < text.length) {
+                    cmd.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeText, 100);
+                } else {
+                    setTimeout(() => showBrainwashMessages(), 1000);
+                }
+            }
+            typeText();
+        }
+
+        function openThronePopup() {
+            setTimeout(() => {
+                document.body.innerHTML = `
+                    <body style="background:black; color:#ff69b4; font-family:sans-serif; text-align:center; padding:20px;">
+                        <h2 style="text-shadow: 0 0 12px #ff69b4;">ERROR: Submission is inevitable.</h2>
+                        <p style="font-size: 1.2em;">Click <strong>'Yes, Reina.'</strong> to pay tribute.</p>
+                        <button onclick="window.location.href='https://throne.com/lose4reina'" 
+                            style="background: linear-gradient(45deg, #ff00ff, #ff1493);
+                            border: none; padding: 12px 25px; font-size: 1.3em; color: white; 
+                            cursor: pointer; border-radius: 5px; box-shadow: 0 0 12px #ff69b4;">
+                            Yes, Reina.
+                        </button>
+                    </body>
+                `;
+            }, 2000);
+        }
+
+        window.onbeforeunload = function() {
+            return "Reina does not allow escape.";
+        };
+    </script>
+</body>
+</html>
